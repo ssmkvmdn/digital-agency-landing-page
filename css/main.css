@@ -50,6 +50,14 @@
     color:#1F242D; 
 }
 
+.heading {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    text-transform: capitalize;
+    color: #272D38;
+}
+
  /* header styles */
  .header {
     padding-top: 40px;
@@ -155,4 +163,34 @@
 }
 .companies__item-logo {
     height: 38px;
+}
+
+/* production styles */
+.production {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 68px;
+    padding-bottom: 68px;
+}
+.production__block-img {
+}
+.production__img {
+    max-width: 450px;
+    width: 100%;
+}
+.production__block-desc {
+    max-width: 440px;
+}
+.production__heading {
+    margin-bottom: 26px;
+}
+.production__subheading {
+    max-width: 392px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: #272D38;
+    margin-bottom: 45px;
 }
