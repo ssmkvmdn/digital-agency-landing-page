@@ -94,6 +94,7 @@
  .hero {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 80px;
  }
  .hero__block-text {
     max-width: 540px;
@@ -121,4 +122,37 @@
 
 .hero__block-img {
     max-width: 450px;
+}
+
+/* companies styles */
+.companies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 77px;
+    padding-bottom: 68px;
+}
+.companies__heading {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: capitalize;
+    color: #667085;
+    margin-bottom: 16px;
+}
+.companies__items {
+    display: flex;
+    justify-content: center;
+    max-width: 915px;
+    width: 100%;
+    background-color: #F6F6F6;
+    border-radius: 8px;
+    padding: 22px 24px;
+}
+.companies__item:not(:last-child) {
+    margin-right: 115px;
+}
+.companies__item-logo {
+    height: 38px;
 }
