@@ -72,6 +72,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
  }
 .header__logo {
     font-weight: 700;
@@ -80,8 +82,6 @@
     text-transform: uppercase;    
     color: #272D38;
     cursor: pointer;
-}
-.header__nav {
 }
 .header__nav-list {
     display: flex;
@@ -372,4 +372,38 @@
     font-size: 16px;
     line-height: 16px;
     color: #272D38;
+}
+
+/* media styles */
+@media (min-width: 960px) and (max-width: 1095px) {
+    .container {
+        max-width: 940px;
+    }
+    .header__container {
+        max-width: 940px;
+    }
+    .hero__heading {
+        font-size: 54px;
+    }
+    .contacts__block-desc {
+        padding-right: 10px;
+    }
+    .footer__top {
+        gap: 120px;
+    }
+    .footer__nav-columns {
+        gap: 120px;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+    .container {
+        max-width: 620px;
+    }
+    .header__container {
+        max-width: 620px;
+    }
+    .header__nav {
+        display: none;
+    }
 }
