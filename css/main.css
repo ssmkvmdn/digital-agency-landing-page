@@ -380,26 +380,7 @@
 }
 
 /* media styles */
-@media (min-width: 960px) and (max-width: 1095px) {
-    .container {
-        max-width: 940px;
-    }
-    .header__container {
-        max-width: 940px;
-    }
-    .hero__heading {
-        font-size: 54px;
-    }
-    .contacts__block-desc {
-        padding-right: 10px;
-    }
-    .footer__top {
-        gap: 120px;
-    }
-    .footer__nav-columns {
-        gap: 120px;
-    }
-}
+
 
 @media only screen and (max-width: 320px) { 
     .container {
@@ -425,14 +406,9 @@
     }
 }
 
-
 @media only screen and (max-width: 640px) {
     .container {
         max-width: 620px;
-    }
-    .button {
-        font-size: 14px;
-        padding: 4px 24px;
     }
     .header {
         max-width: 620px;
@@ -445,12 +421,6 @@
     }
     .header__logo {
         font-size: 18px;
-    }
-    .hero__heading {
-        font-size: 40px;
-    }
-    .hero__subheading {
-        font-size: 16px;
     }
     .hero__block-img {
         margin-top: 48px;
@@ -466,10 +436,63 @@
     }
 }
 
-@media (max-width: 959px) {
+@media only screen and (max-width: 960px) {
+    .container {
+        max-width: 940px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .button {
+        font-size: 14px;
+        padding: 8px 24px;
+    }
+    .hero__heading {
+        font-size: 40px;
+    }
+    .hero__subheading {
+        font-size: 16px;
+    }    
+}
+
+@media only screen and (min-width: 641px) and (max-width: 959px) {
+    .hero__heading {
+        font-size: 40px;
+    }
     .companies {
         padding-top: 40px;
     }
+    .companies__item:not(:last-child) {
+        margin-right: 70px;
+    }
+    .companies__item-logo {
+        max-height: 40px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1095px) {
+    .container {
+        max-width: 940px;
+    }
+    .header__container {
+        max-width: 940px;
+    }
+    .hero__heading {
+        font-size: 54px;
+    }
+    .contacts__block-desc {
+        padding-right: 10px;
+    }
+    .footer__top {
+        gap: 120px;
+    }
+    .footer__nav-columns {
+        gap: 120px;
+    }
+}
+
+
+
+@media (max-width: 959px) {
     .header__burger {
         z-index: 5;
         display: block;
