@@ -23,6 +23,10 @@
     font-family: serif;font-family: 'Inter', sans-serif;
  }
 
+ body._lock {
+    overflow: hidden;
+ }
+
 .container {
     max-width: 1095px;
     padding: 0 15px;
@@ -64,7 +68,7 @@
  /* header styles */
  .header {
     padding-top: 40px;
-    padding-bottom: 97px;
+    padding-bottom: 40px;
     max-width: 1076px;
     margin: 0 auto;
  }
@@ -107,6 +111,7 @@
  .hero {
     display: flex;
     justify-content: space-between;
+    padding-top: 57px;
     padding-bottom: 80px;
  }
  .hero__block-text {
@@ -406,9 +411,6 @@
 }
 
 @media (max-width: 767px) {
-    .header__nav {
-        /* display: none; */
-    }
     .header__burger {
         z-index: 5;
         display: block;
@@ -427,6 +429,12 @@
         transition: all .3s ease 0s;
         background-color: #272D38;
     }
+    .header__burger._active span,
+    .header__burger._active::before,
+    .header__burger._active::after {
+        background-color: #fff;
+
+    }
     .header__burger::before,
     .header__burger::after {
         content: "";
@@ -439,23 +447,41 @@
     }
     .header__burger span {
         top: 50%;
-        transform: scale(1) translate(0px,-50%);
+        transform: scale(1) translate(0px, -50%);
+    }
+    .header__burger._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+    .header__burger._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .header__burger._active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
     }
 
     .header__nav {
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         width: 100%;
         height: 100%;
         background-color: rgba(0,0,0,0.9);
         padding: 100px 30px 30px 30px;
         transition: left 0.3s ease 0s;
+        overflow: auto;
     }
+
+    .header__nav._active {
+        left: 0;
+    }
+
     .header__nav-list {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        
     }
     .header__nav-link {
         color: #fff;
